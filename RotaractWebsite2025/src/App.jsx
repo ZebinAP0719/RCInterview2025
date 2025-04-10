@@ -12,8 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/select-council" element={<SelectCouncil />} />
-        <Route path="/form/senior" element={<SeniorCouncil />} /> {/* ✅ Add this */}
-        <Route path="/form/junior" element={<JuniorCouncil />} /> 
+        <Route path="/senior" element={<SeniorCouncil />} /> {/* ✅ Add this */}
+        <Route path="/junior" element={<JuniorCouncil />} /> 
         <Route path="/dashboard" element={<UserDashboard />} />
         <Route path="/admin" element={<AdminDashboard />} />
       </Routes>

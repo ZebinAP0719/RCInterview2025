@@ -1,29 +1,28 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/styles.css";
 
-function SelectCouncil() {
+const SelectCouncil = () => {
   const navigate = useNavigate();
 
-  const handleSelect = (council) => {
-    navigate(`/form/${council}`);
-  };
-
   return (
-    <div className="council-container">
-      <div className="glass-card animate">
-        <h2 className="title">Select Your Council</h2>
-        <div className="council-buttons">
-          <button className="council-btn senior" onClick={() => handleSelect("senior")}>
-            Senior Council
-          </button>
-          <button className="council-btn junior" onClick={() => handleSelect("junior")}>
-            Junior Council
-          </button>
-        </div>
+    <div className="select-council-page" style={{ textAlign: "center", marginTop: "80px" }}>
+      <h2>Upcomming Year of Study</h2>
+      <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "40px" }}>
+        <button
+          onClick={() => navigate("/senior")}
+          style={{ padding: "15px 30px", fontSize: "18px", cursor: "pointer" }}
+        >
+          Third Year
+        </button>
+        <button
+          onClick={() => navigate("/junior")}
+          style={{ padding: "15px 30px", fontSize: "18px", cursor: "pointer" }}
+        >
+          Second Year
+        </button>
       </div>
     </div>
   );
-}
+};
 
 export default SelectCouncil;
